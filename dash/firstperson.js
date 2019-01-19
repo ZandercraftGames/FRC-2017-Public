@@ -9,5 +9,5 @@ function startStream() {
 }
 
 function renewStream() {
-  webcam.src = "http://roborio-254-frc.local:5801/?action=stream&n=" + (++imageNr);
+  webcam.src = "http://roborio-2609-frc.local:5801/?action=stream&n=" + (++imageNr);
 }

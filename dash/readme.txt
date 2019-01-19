@@ -20,5 +20,6 @@ $ python dash.py localhost
 
 This spews some basic data at the client.
 
-** Windows:
+** 
+Windows:
 Run `run_dashboard.bat`, this assumes the robot is at `10.2.54.2`. This will start the server and launch a browser with the client.

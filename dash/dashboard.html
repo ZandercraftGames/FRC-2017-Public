@@ -10,9 +10,36 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/lumen.min.css">
 
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>      
   </head>
   <body>
+    <style>
+      body {
+    background-color: #000000;
+    }
+    </style>
+    <button type="button" onclick="blueBackground()">Blue Background</button>
+    <button type="button" onclick="purpleBackground()">Purple Background</button>
+    <button type="button" onclick="blackBackground()">Black Background</button>
+
+    <script>
+        function blackBackground()
+        {   
+          document.body.style.background="black";
+        }
+        </script>
+    <script>
+    function blueBackground()
+    {   
+      document.body.style.background="url(background.jpg)";
+    }
+    </script>
+    <script>
+      function purpleBackground()
+      {   
+        document.body.style.background="url(background2.jpg)";
+      }
+      </script>
     <!--<img src="http://10.2.54.2:5800/" alt="selfie-cam"></img>-->
 
     <!-- things to show:
@@ -28,31 +55,59 @@
       -->
     <div class="topLineView">
       <div class="leftBoxes">
-        <div class="firstPersonViewDiv">
-          <!-- TODO: put the actual stream here -->
-          <img src="rubber_duck.jpg" class="firstPersonViewImg"/>
+        <div class="firstPersonViewDiv" onload="updateImage();">
+          
+          <!-- <img src="http://10.2.54.2:5800/" alt="robot-camera"></img> -->
+          <!-- <img id="robot-video" src="http://dreamicus.com/data/image/image-06.jpg" class="firstPersonViewImg" onerror="this.src="2609.jpg" alt="robot-camera"></img> -->
+          <script>
+            window.onload = function() {
+              var imageNr = 0;
+              var webcam;
+  
+              function startStream(){
+                webcam = document.getElementById("robot-video");
+  
+                setInterval(renewStream, 2000);
+              }
+  
+              function renewStream(){
+                webcam.src = "http://roborio-2609-frc.local:5801/?action=stream&n=" + (++imageNr);
+              }
+            }
+            </script>
+         <img id="robot-video" src="webcam.src" style="color: red; font-size: 30px; font-weight: bold;" class="firstPersonViewImg" alt="Could not connect to robot webcam. Attempting to connect every two seconds...                                          "></img>
+          <!--<script>
+            window.onload = function() {
+              var image = document.getElementById("robot-video");
+
+              function updateImage(){
+                image.src = image.src.split("?")[0] + "?" + new Date().getTime();
+              }
+              setInterval(updateImage, 500);
+            }
+          </script> -->
         </div>
-        <div class="hudBoxes">
-          <div id="colorBox" style="background-color: orange;">UNKNOWN</div>
-        </div>
+        <!-- <div class="hudBoxes">
+          <div id="colorBox" style="background-color: rgb(162, 0, 255);"></div>
+        </div> -->
       </div>
       <div class="control">
         <div class="autoSelector">
           <div>
-            <b>Auto Mode:</b>
+            <b style="color:rgb(255, 255, 255);">Auto Mode:</b>
             <div id="autoSelectorContainer"></div>
-            <div>Selected: <span id="selectedAutoMode">UNKNOWN</span></div>
+            <div style="color:rgb(255, 255, 255);">Selected: <span id="selectedAutoMode">UNKNOWN</span></div>
           </div>
         </div>
         <div class="extraDataNumbers">
           <div>
-            <b>Air Pressure:<br/><span id="airPressureHolder">UNKNOWN</span></b>
+            <b style="color:rgb(255, 255, 255);">Air Pressure:<br/><span id="airPressureHolder">UNKNOWN</span></b>
             <div class="progress" id="psi_progress" style="width:300px">
               <div><p>Unknown Pressure</p></div>
             </div>
           </div>
           <div>
-            <b>Camera: <div id="cameraBox" style="width:100%;height:80px">UNKNOWN</div></b>
+            <b style="color:rgb(255, 255, 255);">Camera: <div id="cameraBox" style="width:100%;height:80px">UNKNOWN</div></b>
           </div>
           <br/>
         </div>
