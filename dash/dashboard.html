@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Bootstrap, JQuery, and Lumen -->
@@ -34,6 +34,13 @@
         <button type="button" id="blueBackground" class="btn btn-dark">Blue Background</button>
         <button type="button" id="purpleBackground" class="btn btn-dark">Purple Background</button>
     </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#blackBackground").addClass("active");
+        });
+    </script>
+
     <script>
         $("#blackBackground").click(function () {
             $("#blackBackground").addClass("active");
