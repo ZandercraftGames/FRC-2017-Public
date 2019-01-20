@@ -21,6 +21,7 @@
             background-color: #000000;
         }
     </style>
+    <!-- Buttons -->
     <!-- Button Method Without Bootstrap
     <button type="button" onclick="blueBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Blue Background</button>
     <button type="button" onclick="purpleBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Purple Background</button>
@@ -28,7 +29,7 @@
     <!-- <button type="button" onclick="blackBackground()" class="btn btn-dark" type="input">Black Background</button>
     <button type="button" onclick="blueBackground()" class="btn btn-dark" type="input">Blue Background</button>
     <button type="button" onclick="purpleBackground()" class="btn btn-dark" type="input">Purple Background</button> -->
-    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+    <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
         <label class="btn btn-secondary active">
             <input type="radio" name="options" onclick="blackBackground()" id="blackBackground" autocomplete="off" checked> Black Background
         </label>
@@ -38,9 +39,33 @@
         <label class="btn btn-secondary">
             <input type="radio" name="options" onclick="purpleBackground()" id="purpleBackground" autocomplete="off"> Purple Background
         </label>
+    </div> -->
+    <div class="btn-group" role="group" aria-label="Background Change">
+        <button type="button" id="blackBackground" class="btn btn-dark">Black Background</button>
+        <button type="button" id="blueBackground" class="btn btn-dark">Blue Background</button>
+        <button type="button" id="purpleBackground" class="btn btn-dark">Purple Background</button>
     </div>
-
     <script>
+        $("#blackBackground").click(function () {
+            $("#blackBackground").addClass("active");
+            $("#blueBackground").removeClass("active");
+            $("#purpleBackground").removeClass("active");
+            document.body.style.background = "black";
+        });
+        $("#blueBackground").click(function () {
+            $("#blueBackground").addClass("active");
+            $("#blackBackground").removeClass("active");
+            $("#purpleBackground").removeClass("active");
+            document.body.style.background = "url(background.jpg)";
+        });
+        $("#purpleBackground").click(function () {
+            $("#purpleBackground").addClass("active");
+            $("#blackBackground").removeClass("active");
+            $("#blueBackground").removeClass("active");
+            document.body.style.background = "url(background2.jpg)";
+        });
+    </script>
+    <!-- <script>
         function blackBackground() {
             document.body.style.background = "black";
         }
@@ -54,7 +79,7 @@
         function purpleBackground() {
             document.body.style.background = "url(background2.jpg)";
         }
-    </script>
+    </script> -->
     <!--<img src="http://10.2.54.2:5800/" alt="selfie-cam"></img>-->
     <!-- things to show:
          - have ball?
