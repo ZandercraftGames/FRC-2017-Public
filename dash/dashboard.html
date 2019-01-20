@@ -1,6 +1,7 @@
 <html>
 <html lang="en">
 <head>
+    <!-- Bootstrap, JQuery, and Lumen -->
     <script type="text/javascript" src="jquery/jquery-1.12.0.min.js"></script>
     <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
     <script type="text/javascript" src="Progress_Bar.js"></script>
@@ -9,37 +10,25 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
     <script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="bootstrap/lumen.min.css">
-    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- HTML5 Standards -->
+    <meta charset="utf-8">
+
+    <!-- Styles and Javascript -->
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="main.js"></script>
 </head>
 <body>
+    <!-- Default Background Colour -->
     <style>
         body {
             background-color: #000000;
         }
     </style>
+
+
     <!-- Buttons -->
-    <!-- Button Method Without Bootstrap
-    <button type="button" onclick="blueBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Blue Background</button>
-    <button type="button" onclick="purpleBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Purple Background</button>
-    <button type="button" onclick="blackBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Black Background</button> -->
-    <!-- <button type="button" onclick="blackBackground()" class="btn btn-dark" type="input">Black Background</button>
-    <button type="button" onclick="blueBackground()" class="btn btn-dark" type="input">Blue Background</button>
-    <button type="button" onclick="purpleBackground()" class="btn btn-dark" type="input">Purple Background</button> -->
-    <!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
-        <label class="btn btn-secondary active">
-            <input type="radio" name="options" onclick="blackBackground()" id="blackBackground" autocomplete="off" checked> Black Background
-        </label>
-        <label class="btn btn-secondary">
-            <input type="radio" name="options" onclick="blueBackground()" id="blueBackground" autocomplete="off"> Blue Background
-        </label>
-        <label class="btn btn-secondary">
-            <input type="radio" name="options" onclick="purpleBackground()" id="purpleBackground" autocomplete="off"> Purple Background
-        </label>
-    </div> -->
     <div class="btn-group" role="group" aria-label="Background Change">
         <button type="button" id="blackBackground" class="btn btn-dark">Black Background</button>
         <button type="button" id="blueBackground" class="btn btn-dark">Blue Background</button>
@@ -65,6 +54,9 @@
             document.body.style.background = "url(background2.jpg)";
         });
     </script>
+
+
+    <!-- Robot Camera -->
     <div class="topLineView">
         <div class="leftBoxes">
             <div class="firstPersonViewDiv" onload="updateImage();">
@@ -109,6 +101,8 @@
             </div>
             -->
         </div>
+
+        <!-- Robot Statistics/Information -->
         <div class="control">
             <div class="autoSelector">
                 <div>
