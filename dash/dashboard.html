@@ -65,39 +65,14 @@
             document.body.style.background = "url(background2.jpg)";
         });
     </script>
-    <!-- <script>
-        function blackBackground() {
-            document.body.style.background = "black";
-        }
-    </script>
-    <script>
-        function blueBackground() {
-            document.body.style.background = "url(background.jpg)";
-        }
-    </script>
-    <script>
-        function purpleBackground() {
-            document.body.style.background = "url(background2.jpg)";
-        }
-    </script> -->
-    <!--<img src="http://10.2.54.2:5800/" alt="selfie-cam"></img>-->
-    <!-- things to show:
-         - have ball?
-         - on target?
-           - hood on target
-           - flywheel on target
-           - turret on target
-           - drive speed
-         - auton selector
-           - lane (1-5)
-           - portcullis/1 ball return/1 ball no return
-      -->
     <div class="topLineView">
         <div class="leftBoxes">
             <div class="firstPersonViewDiv" onload="updateImage();">
 
-                <!-- <img src="http://10.2.54.2:5800/" alt="robot-camera"></img> -->
-                <!-- <img id="robot-video" src="http://dreamicus.com/data/image/image-06.jpg" class="firstPersonViewImg" onerror="this.src="2609.jpg" alt="robot-camera"></img> -->
+                <!-- Old Robot Webcam System
+                <img src="http://10.2.54.2:5800/" alt="robot-camera"></img>
+                <img id="robot-video" src="http://dreamicus.com/data/image/image-06.jpg" class="firstPersonViewImg" onerror="this.src="2609.jpg" alt="robot-camera"></img>
+                -->
                 <script>
                     window.onload = function () {
                         var imageNr = 0;
@@ -115,7 +90,8 @@
                     }
                 </script>
                 <img id="robot-video" src="webcam.src" style="color: red; font-size: 30px; font-weight: bold;" class="firstPersonViewImg" alt="Could not connect to robot webcam. Attempting to connect every two seconds...                                          "></img>
-                <!--<script>
+                <!-- Old Robot Video Refresh System
+                <script>
                   window.onload = function() {
                     var image = document.getElementById("robot-video");
 
@@ -124,11 +100,14 @@
                     }
                     setInterval(updateImage, 500);
                   }
-                </script> -->
+                </script>
+                -->
             </div>
-            <!-- <div class="hudBoxes">
+            <!-- Deprecated
+              <div class="hudBoxes">
               <div id="colorBox" style="background-color: rgb(162, 0, 255);"></div>
-            </div> -->
+            </div>
+            -->
         </div>
         <div class="control">
             <div class="autoSelector">
