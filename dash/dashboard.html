@@ -21,9 +21,24 @@
             background-color: #000000;
         }
     </style>
+    <!-- Button Method Without Bootstrap
     <button type="button" onclick="blueBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Blue Background</button>
     <button type="button" onclick="purpleBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Purple Background</button>
-    <button type="button" onclick="blackBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Black Background</button>
+    <button type="button" onclick="blackBackground()" style="background: purple; color: white; border-style: outset; border-color: #860982; border-radius: 8px;">Black Background</button> -->
+    <!-- <button type="button" onclick="blackBackground()" class="btn btn-dark" type="input">Black Background</button>
+    <button type="button" onclick="blueBackground()" class="btn btn-dark" type="input">Blue Background</button>
+    <button type="button" onclick="purpleBackground()" class="btn btn-dark" type="input">Purple Background</button> -->
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary active">
+            <input type="radio" name="options" onclick="blackBackground()" id="blackBackground" autocomplete="off" checked> Black Background
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" onclick="blueBackground()" id="blueBackground" autocomplete="off"> Blue Background
+        </label>
+        <label class="btn btn-secondary">
+            <input type="radio" name="options" onclick="purpleBackground()" id="purpleBackground" autocomplete="off"> Purple Background
+        </label>
+    </div>
 
     <script>
         function blackBackground() {
