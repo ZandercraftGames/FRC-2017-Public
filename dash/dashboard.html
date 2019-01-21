@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Bootstrap, JQuery, and Lumen -->
@@ -31,8 +31,8 @@
     <!-- Buttons -->
     <div class="btn-group" role="group" aria-label="Background Change">
         <button type="button" id="blackBackground" class="btn btn-dark">Black Background</button>
-        <button type="button" id="blueBackground" class="btn btn-dark">Blue Background</button>
-        <button type="button" id="purpleBackground" class="btn btn-dark">Purple Background</button>
+        <button type="button" id="blueBackground" class="btn btn-dark">Blue Background <span class="badge badge-pill badge-info">New</span></button>
+        <button type="button" id="purpleBackground" class="btn btn-dark">Purple Background <span class="badge badge-pill badge-info">New</span></button>
     </div>
 
     <script>
@@ -137,4 +137,19 @@
         <div id="rawValuesContainer"></div>
     </div>
 </body>
+
+<footer>
+    <p>
+        <a class="btn btn-dark" data-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+            Dashboard Info
+        </a>
+    </p>
+    <div class="collapse" id="collapseInfo">
+        <div class="card card-body bg-dark" style="color:rgb(255, 255, 255);">
+            This dashboard was originally developed by FRC Team 254 and heavily improved apon by FRC Team 2609 BeaverworX. 
+            <span class="badge  badge-pill badge-danger">Danger!</span> This dashboard is currently in heavy development and may contain bugs.
+        </div>
+    </div>
+</footer>
+
 </html>
