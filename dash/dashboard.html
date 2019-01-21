@@ -33,11 +33,13 @@
     </nav>
 
 </head>
-<body style="padding-top: 70px;">
+
+<body>
     <!-- Default Background Colour -->
     <style>
         body {
             background-color: #000000;
+            padding-top: 70px;
         }
     </style>
 
@@ -149,7 +151,34 @@
                 <div>
                     <b style="color:rgb(255, 255, 255);">Camera: <div id="cameraBox" style="width:100%;height:80px">UNKNOWN</div></b>
                 </div>
-                <br />
+                <div>
+                    <input type='range' min='0' max='100' value='0' id='slider'></input>
+                    <div id='dispDiv' style='margin-top:2em;'></div>
+                </div>
+                <script>
+                    var slider = document.getElementById("slider");
+                    
+                    var a = 0; // variable to be controlled
+                    
+                    var dispDiv = document.getElementById("dispDiv");
+                    dispDiv.innerHTML = "the js variable 'a' currently = " + a;
+
+                    /* // function is called when slider value changes, not realtime
+                    slider.addEventListener("change", function() {
+                        a = slider.value;
+                        dispDiv.innerHTML = "the js variable 'a' currently = " + a;
+                    }) */
+
+                    
+
+                    // realtime updates as you slide it:
+                    setInterval(function() {
+                        a = slider.value;
+                        dispDiv.innerHTML = "the js variable 'a' currently = " + a;
+                    }, 100)
+
+                    
+                </script>
             </div>
         </div>
     </div>
