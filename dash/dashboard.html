@@ -88,7 +88,7 @@
                         }
                     }
                 </script>
-                <img id="robot-video" src="webcam.src" style="color: red; font-size: 30px; font-weight: bold;" class="firstPersonViewImg" alt="Could not connect to robot webcam. Attempting to connect every two seconds...                                          ">
+                <img id="robot-video" src="webcam.src" style="color: red; font-size: 30px; font-weight: bold;" class="firstPersonViewImg" alt="Could not connect to robot webcam. Attempting to connect every two seconds...                                           ">
                 <!-- Old Robot Video Refresh System
                 <script>
                   window.onload = function() {
@@ -122,7 +122,7 @@
                 <div>
                     <b style="color:rgb(255, 255, 255);">Air Pressure:<br /><span id="airPressureHolder">UNKNOWN</span></b>
                     <div class="progress" id="psi_progress" style="width:300px">
-                        <div><p style="font-size: 15px;">Unknown Pressure</p></div>
+                        <div><p style="font-size: 15px; margin-right: 10px; margin-top: 7px;">Unknown Pressure</p></div>
                     </div>
                 </div>
                 <div>
@@ -139,15 +139,17 @@
 </body>
 
 <footer>
-    <p>
-        <a class="btn btn-dark" data-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
-            Dashboard Info
-        </a>
-    </p>
-    <div class="collapse" id="collapseInfo">
-        <div class="card card-body bg-dark" style="color:rgb(255, 255, 255);">
-            This dashboard was originally developed by FRC Team 254 and heavily improved apon by FRC Team 2609 BeaverworX. 
-            <span class="badge  badge-pill badge-danger">Danger!</span> This dashboard is currently in heavy development and may contain bugs.
+    <div class="fixed-bottom">
+        <p>
+            <a class="btn btn-dark" data-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Dashboard Info
+            </a>
+        </p>
+        <div class="collapse" id="collapseInfo">
+            <div class="card card-body bg-dark" style="color:rgb(255, 255, 255);">
+                This dashboard was originally developed by FRC Team 254 and heavily improved apon by FRC Team 2609 BeaverworX.
+                <span class="badge  badge-pill badge-danger">Danger!</span> This dashboard is currently in heavy development and may contain bugs.
+            </div>
         </div>
     </div>
 </footer>
