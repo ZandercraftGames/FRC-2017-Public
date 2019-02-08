@@ -192,22 +192,24 @@
 
 <footer>
     <div class="fixed-bottom">
-        <p>
-            <a class="btn btn-dark" data-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Dashboard Info
-            </a>
-        </p>
+        <div class="btn-toolbar" role="toolbar" aria-label="Button Toolbar for Dashboard Info and License Button">
+            <div class="btn-group mr-2" role="group" aria-label="Dashboard Info Button">
+                <a class="btn btn-dark" data-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Dashboard Info
+                </a>
+            </div>
+            <div class="btn-group mr-2" role="group" aria-label="License Button">
+                <a class="btn btn-dark" data-toggle="collapse" href="#collapseLicense" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    License
+                </a>
+            </div>
+        </div>
         <div class="collapse" id="collapseInfo">
             <div class="card card-body bg-dark" style="color:rgb(255, 255, 255);">
                 This dashboard was originally developed by FRC Team 254 and heavily improved apon by FRC Team 2609 BeaverworX.
                 <span class="badge  badge-pill badge-danger">Danger!</span> This dashboard is currently in heavy development and may contain bugs.
             </div>
         </div>
-        <p>
-            <a class="btn btn-dark" data-toggle="collapse" href="#collapseLicense" role="button" aria-expanded="false" aria-controls="collapseExample">
-                License
-            </a>
-        </p>
         <div class="collapse" id="collapseLicense">
             <div class="card card-body bg-dark" style="color:rgb(255, 255, 255); text-align: center;">
                 MIT License<br>
