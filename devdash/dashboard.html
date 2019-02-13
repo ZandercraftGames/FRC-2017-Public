@@ -54,8 +54,8 @@
     <!-- Buttons -->
     <div class="btn-group" role="group" aria-label="Background Change">
         <button type="button" id="blackBackground" class="btn btn-dark">Black Background</button>
-        <button type="button" id="blueBackground" class="btn btn-dark">Blue Background <span class="badge badge-pill badge-info">New</span></button>
-        <button type="button" id="purpleBackground" class="btn btn-dark">Purple Background <span class="badge badge-pill badge-info">New</span></button>
+        <button type="button" id="blueBackground" class="btn btn-dark">Blue Background <span class="badge badge-pill badge-warning">2609 Exclusive</span></button>
+        <button type="button" id="purpleBackground" class="btn btn-dark">Purple Background <span class="badge badge-pill badge-warning">2609 Exclusive</span></button>
     </div>
 
     <script>
@@ -91,19 +91,31 @@
         <div class="leftBoxes">
             <!-- <div class="firstPersonViewDiv" onload="updateImage();"> -->
             <div class="firstPersonViewDiv">
-                <!--<script>
-                    function freshImageUrl () {
-                        var baseURL="http://10.26.9.2:1181/?action=stream&";
-                        return `${baseURL}v=${+new Date}`; // e.g. http://...v=1549616957345
-                    }
-                    funtion refresh(pauseTime) {
-                        setTimeout(()=>
-                            document.querySelector("#robot-video").src=freshImageURL()
-                        ,pauseTime);
-                    }
-                    refresh();
-                </script>-->
+                <!-- <script>
+                    let errSimulation=0;
 
+                    function freshImageUrl() {
+                        errSimulation++; if(!(errSimulation%4)) return "zz"; //remove this line?
+
+                        var baseUrl="http://10.26.9.2:1181/?action=stream&";
+                        return `${baseUrl}v=${new Date}`; // e.g. http://...v=1549616957345
+                    }
+
+                    funtion refresh(pauseTime) {
+                        setTimeout(()=> {
+                            document.querySelector(".status").innerText="Active";
+                            document.querySelector("#robot-video").src=freshImageUrl();
+                        },pauseTime);
+                    }
+
+                    function loadErr(e) {
+                        document.querySelector(".status").innerText="Unavailable"
+                        document.querySelector("#robot-video").alt = "Could not connect to robot webcam. Attempting to connect every two seconds...";
+                        refresh(2000);
+                    }
+
+                    setTimeout(refresh, 1000);
+                </script> -->
                 <!-- Old Robot Webcam System
                 <img src="http://10.2.54.2:5800/" alt="robot-camera"></img>
                 <img id="robot-video" src="http://dreamicus.com/data/image/image-06.jpg" class="firstPersonViewImg" onerror="this.src="2609.jpg" alt="robot-camera"></img>
@@ -124,7 +136,8 @@
                         }
                     }
                 </script> -->
-                <img id="robot-video" src="http://10.26.9.2:1181/?action=stream&" style="color: red; font-size: 30px; font-weight: bold; padding-top: 20px; width: 500px; height: 380px;" class="firstPersonViewImg" alt="Could not connect to robot webcam. Cannot attempt a connection automatically because a silly beaver bork it. Please refresh your page manually.">
+                <img id="robot-video" src="http://10.26.9.2:1181/?action=stream" style="color: red; font-size: 30px; font-weight: bold; padding-top: 20px; width: 560px; height: 440px;" class="firstPersonViewImg" alt="Could not connect to robot webcam. Cannot attempt a connection automatically because a silly beaver bork it. Please refresh your page manually.">
+                <!-- <img onerror="loadErr()" onload="refresh(1000)" src="http://10.26.9.2:1181/?action=stream" id="robot-video" style="color: red; font-size: 30px; font-weight: bold; padding-top: 20px; width: 500px; height: 380px;" class="firstPersonViewImg"> -->
                 <!--Old Robot Video Refresh System
                 <script>
                   window.onload = function() {
