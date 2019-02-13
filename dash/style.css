@@ -12,12 +12,12 @@ body {
 }
 
 .topLineView {
-    overflow: auto;
+    overflow: true;
     width: 100%;
 }
 
 .firstPersonViewDiv {
-    height: 375px;
+    height: 450px;
     float: left;
 }
 
@@ -64,7 +64,7 @@ body {
 }
 .leftBoxes{
     float:left;
-    width:calc( 66% - 10px);
+    width:calc( 67% - 10px);
 }
 button.active {
     background-color: green;
