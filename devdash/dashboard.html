@@ -12,6 +12,19 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/lumen.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Favicon Implementation -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="BeaverworX Robot Dashboard">
+    <meta name="application-name" content="BeaverworX Robot Dashboard">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>BeaverworX Robot Dashboard</title>
     <!-- HTML5 Standards -->
     <meta charset="utf-8">
 
@@ -98,7 +111,7 @@
                         errSimulation++; if(!(errSimulation%4)) return "zz"; //remove this line?
 
                         var baseUrl="http://10.26.9.2:1181/?action=stream&";
-                        return `${baseUrl}v=${new Date}`; // e.g. http://...v=1549616957345
+                        return `${baseUrl}n=${new Date}`; // e.g. http://...v=1549616957345
                     }
 
                     funtion refresh(pauseTime) {
