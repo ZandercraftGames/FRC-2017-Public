@@ -12,6 +12,19 @@
     <link rel="stylesheet" type="text/css" href="bootstrap/lumen.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Favicon Implementation -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="apple-mobile-web-app-title" content="BeaverworX Robot Dashboard">
+    <meta name="application-name" content="BeaverworX Robot Dashboard">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>BeaverworX Robot Dashboard</title>
     <!-- HTML5 Standards -->
     <meta charset="utf-8">
 
@@ -30,6 +43,10 @@
             <ul class="navbar-nav mr-auto"  style="margin-bottom: 20px;">
             </ul>
         </div>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" style="font-size: 16px;" aria-disabled="true">Version: 1.0.0</a>
+          </li>
+      
     </nav>
 
 </head>
@@ -38,7 +55,9 @@
     <!-- Default Background Colour -->
     <style>
         body {
-            background-color: #000000;
+            background-image: url("blackbackground.png");
+            background-size: cover;
+            background-repeat: no-repeat;
             padding-top: 70px;
         }
     </style>
@@ -61,7 +80,9 @@
             $("#blackBackground").addClass("active");
             $("#blueBackground").removeClass("active");
             $("#purpleBackground").removeClass("active");
-            document.body.style.background = "black";
+            document.body.style.background = "url(blackbackground.png)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundRepeat = "no-repeat";
         });
         $("#blueBackground").click(function () {
             $("#blueBackground").addClass("active");
@@ -94,7 +115,7 @@
                         errSimulation++; if(!(errSimulation%4)) return "zz"; //remove this line?
 
                         var baseUrl="http://10.26.9.2:1181/?action=stream&";
-                        return `${baseUrl}v=${new Date}`; // e.g. http://...v=1549616957345
+                        return `${baseUrl}n=${new Date}`; // e.g. http://...v=1549616957345
                     }
 
                     funtion refresh(pauseTime) {
@@ -202,6 +223,14 @@
 
                     
                 </script>
+                <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                    <img src="beaver.jpg" class="card-img-top" alt="Picture of Vaultboy.">
+                    <div class="card-body">
+                      <h5 class="card-title">Developed by 2609 BeaverworX</h5>
+                      <p class="card-text">This dashboard is currently being developed by Zander and Greg at FRC team 2609 BeaverworX. Feel free to check out BeaverworX by clicking the below.</p>
+                      <a href="https://beaverworx.ca" class="btn btn-secondary">Visit Us.</a>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>
