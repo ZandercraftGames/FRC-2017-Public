@@ -68,12 +68,16 @@
             $("#blackBackground").removeClass("active");
             $("#purpleBackground").removeClass("active");
             document.body.style.background = "url(background.jpg)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundRepeat = "no-repeat"; 
         });
         $("#purpleBackground").click(function () {
             $("#purpleBackground").addClass("active");
             $("#blackBackground").removeClass("active");
             $("#blueBackground").removeClass("active");
             document.body.style.background = "url(background2.jpg)";
+            document.body.style.backgroundSize = "cover";
+            document.body.style.backgroundRepeat = "no-repeat";
         });
     </script>
 
